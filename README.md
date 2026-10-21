@@ -1,6 +1,6 @@
 # 🚀 SauceDemo Enterprise Automation Framework
 
-[![CI Automated Test Suite](https://github.com/<USERNAME>/<REPO>/actions/workflows/ci.yml/badge.svg)](https://github.com/<USERNAME>/<REPO>/actions/workflows/ci.yml)
+[![CI Automated Test Suite](https://github.com/KATHIR824/SELENIUM-JAVA-UI-FRAMEWORK/actions/workflows/ci.yml/badge.svg)](https://github.com/KATHIR824/SELENIUM-JAVA-UI-FRAMEWORK/actions/workflows/ci.yml)
 
 An industry-standard, production-ready UI Test Automation Framework built with **Java 21**, **Selenium 4**, **TestNG 7**, and **Allure Reporting**, automating end-to-end user workflows on [SauceDemo](https://www.saucedemo.com).
 
@@ -27,7 +27,7 @@ Designed with clean architecture, Page Object Model (POM), reusable component de
 ## 🏗️ Framework Architecture
 
 ```
-SELENIUM AUTOMATION PROJECT/
+SELENIUM-JAVA-UI-FRAMEWORK/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml                     # GitHub Actions CI pipeline for headless test execution
@@ -199,12 +199,12 @@ mvn allure:serve
 | **AUTH-04** | `LogoutTests` | `cannotAccessInventoryAfterLogout` | `regression` | Direct URL navigation to `/inventory.html` post-logout | Access is denied with error message |
 | **INV-01** | `InventoryTests` | `pageTitleValidationTest` | `smoke`, `regression` | Verify application window title | Window title equals `"Swag Labs"` |
 | **INV-02** | `InventoryTests` | `productCountIsSix` | `smoke`, `regression` | Verify total catalog count | Exactly 6 product items are rendered |
-| **INV-03** | `InventoryTests` | `allProductsHavePriceAndName` | `regression` | Validate data integrity across catalog items | Every product has a non-blank title and price $> 0.0$ |
+| **INV-03** | `InventoryTests` | `allProductsHavePriceAndName` | `regression` | Validate data integrity across catalog items | Every product has a non-blank title and a price greater than 0 |
 | **SORT-01** | `SearchTests` | `sortPriceLowToHighTest` | `regression` | Select 'Price (low to high)' dropdown | Prices sorted in strictly ascending order |
 | **SORT-02** | `SearchTests` | `sortNameZToATest` | `regression` | Select 'Name (Z to A)' dropdown | Product titles sorted in reverse alphabetical order |
 | **CART-01** | `CartTests` | `addSingleProductToCart` | `smoke`, `regression` | Add single item from catalog | Cart badge shows `1`, Cart page lists exact added product |
 | **CART-02** | `CartTests` | `addMultipleProductsToCart` | `regression` | Add two different products | Cart badge shows `2`, Cart page lists both exact products |
-| **CART-03** | `CartTests` | `removeProductFromCartOnHomePage` | `regression` | Remove item directly on inventory page | Cart badge removes immediately ($0$ wait time) |
+| **CART-03** | `CartTests` | `removeProductFromCartOnHomePage` | `regression` | Remove item directly on inventory page | Cart badge disappears immediately (no wait time) |
 | **CART-04** | `CartTests` | `removeProductFromCartPage` | `regression` | Remove item from within Cart page | Cart becomes empty and badge disappears |
 | **CHK-01** | `CheckoutTests` | `completeCheckoutEndToEnd` | `smoke`, `regression` | Complete full purchase journey | "Thank you for your order!" confirmation header displayed |
 | **CHK-02** | `CheckoutTests` | `checkoutWithMissingInformation` [x3] | `regression` | Data-driven missing fields in checkout form | Accurate validation error per missing field |
@@ -215,7 +215,7 @@ mvn allure:serve
 
 ## 🔮 Future Improvements
 
-- [ ] **Docker & Selenium Grid Integration**: Containerize test execution using Docker Compose and Zalenium/Selenium Grid.
+- [ ] **Docker & Selenium Grid Integration**: Containerize test execution using Docker Compose and Selenium Grid.
 - [ ] **BDD Cucumber Integration**: Add Gherkin `.feature` specifications for enhanced business stakeholder collaboration.
 - [ ] **REST API Hybrid Tests**: Seed test state using backend API calls before executing UI assertions to increase test velocity.
 - [ ] **Visual Regression Testing**: Integrate Percy or Applitools for automated visual diff verification.
