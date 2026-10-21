@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SauceDemo Parallel Test Suite" parallel="methods" thread-count="4">
+    <listeners>
+        <listener class-name="com.company.framework.listeners.TestListener" />
+        <listener class-name="com.company.framework.listeners.RetryAnalyzer$AnnotationTransformer" />
+    </listeners>
+
+    <test name="Parallel Methods Execution">
+        <classes>
+            <class name="com.company.tests.LoginTests"/>
+            <class name="com.company.tests.InventoryTests"/>
+            <class name="com.company.tests.SearchTests"/>
+            <class name="com.company.tests.CartTests"/>
+            <class name="com.company.tests.CheckoutTests"/>
+            <class name="com.company.tests.LogoutTests"/>
+        </classes>
+    </test>
+</suite>

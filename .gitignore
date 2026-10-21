@@ -1,0 +1,31 @@
+# Build output & compiled classes
+target/
+*.class
+
+# Allure CLI, reports, and results
+.allure/
+allure-results/
+allure-report/
+
+# Logs & TestNG output
+logs/
+*.log
+test-output/
+
+# IDE & Editor configuration
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# Temporary / cleanup directory
+_to_delete/
+
+# Environment secrets
+.env
+
+# OS metadata
+.DS_Store
+Thumbs.db
